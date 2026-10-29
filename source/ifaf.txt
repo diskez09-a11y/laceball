@@ -1,0 +1,59 @@
+1 USA
+2 Austria
+3 Mexico
+4 Italy
+5 France
+6 Switzerland
+7 Japan
+8 Australia
+9 Israel
+10 Canada
+11 Germany
+12 Great Britain
+13 Panama
+14 Denmark
+15 New Zealand
+16 Spain
+17 Brazil
+18 Sweden
+19 Ireland
+20 Ukraine
+21 Finland
+22 Czechia
+23 Argentina
+24 Kuwait
+25 Chile
+26 Poland
+27 Singapore
+28 Korea
+29 Thailand
+30 Georgia
+31 Cameroon
+32 Nigeria
+33 American Samoa
+34 China
+35 Egypt
+36 Indonesia
+37 Tunisia
+38 Slovenia
+39 Netherlands
+40 Philippines
+41 Hungary
+42 Guatemala
+42 Croatia
+42 Hong Kong, China
+45 Portugal
+46 Belgium
+47 Slovakia
+48 Morocco
+49 Colombia
+50 South Africa
+51 Norway
+52 Jamaica
+53 Jordan
+54 El Salvador
+55 Senegal
+56 India
+57 Uganda
+58 Serbia
+59 Malaysia
