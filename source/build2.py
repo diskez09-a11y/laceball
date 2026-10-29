@@ -26,7 +26,10 @@ flag_js = "const REGION = " + json.dumps(REGION, ensure_ascii=False) + ";\n" + "
 snap_js = "const SNAPSHOTS = [\n" + ",\n".join(
     "  { label: " + json.dumps(lbl) + ", rows: [\n" + ",\n".join("    " + json.dumps(r, ensure_ascii=False) for r in rs) + "\n  ] }"
     for lbl, rs in SNAPS) + "\n];"
-html = open(SP + '/template.html').read().replace('__DATA__', flag_js + "\n" + snap_js)
-open('/home/claude/ifla/index.html', 'w').write(html)
+# Both pages (index.html and map.html) read the ranking data from data.js; template.html is copied to index.html unchanged.
+head = "/* Flag file for each nation, then one snapshot per ranking date, newest first.\n   Each row is [name, FIFA, World Rugby, IFAF, FIBA]. To publish a new ranking, add a snapshot at the top.\n   Points, order, positions and movement are all computed from the ranks. */\n"
+fixtures = open('/home/claude/ifla/data.js').read().split('/* Fixtures', 1)[1]   # keep the fixture list as it is
+open('/home/claude/ifla/data.js', 'w').write(head + flag_js + "\n" + snap_js + "\n\n/* Fixtures" + fixtures)
+open('/home/claude/ifla/index.html', 'w').write(open(SP + '/template.html').read())
 print([(l, len(r)) for l, r in SNAPS])
 print("missing flags:", [c for c in CODE.values() if not os.path.exists(f'/home/claude/ifla/flags/{c}.svg')])
